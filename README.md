@@ -54,12 +54,53 @@ La herramienta también proporciona bloques de comandos CLI pregenerados para di
 
 ```
 Red-Empresarial-Multi-Sede/
-├── index.html                  # Archivo principal de la herramienta
+├── index.html                  # Versión final (v6) de la herramienta
 ├── js/
-│   ├── calculadora_vlsm_corregida.js # Lógica de la calculadora IP
-│   └── serial_com_controller.js  # Lógica de la conexión Serial COM
+│   ├── calculadora_vlsm_corregida.js # Lógica de la calculadora IP (usada en v6)
+│   └── serial_com_controller.js  # Lógica de la conexión Serial COM (usada en v6)
+├── versiones/                  # Historial de versiones del proyecto
+│   ├── v1/
+│   │   └── herramienta_red_actualizada.html
+│   ├── v2/
+│   │   └── herramienta_red_integrada.html
+│   ├── v3/
+│   │   └── herramienta_red_integrada_v2.html
+│   ├── v4/
+│   │   └── herramienta_red_integrada.html
+│   ├── v5/
+│   │   └── herramienta_red_integrada_v5.html
+│   └── v6_final/
+│       └── index.html          # Copia de la versión final
 └── README.md                   # Este archivo
 ```
+
+## 📜 Historial de Versiones
+
+A continuación, se detalla la evolución de la herramienta a través de sus diferentes versiones, destacando las funcionalidades añadidas en cada etapa:
+
+### **Versión 1 (v1)**
+-   **Archivo:** `versiones/v1/herramienta_red_actualizada.html`
+-   **Descripción:** Versión inicial de la herramienta, enfocada en la presentación de comandos CLI por fabricante y tipo de dispositivo. Incluía una estructura básica de pestañas y la base de datos de comandos.
+
+### **Versión 2 (v2)**
+-   **Archivo:** `versiones/v2/herramienta_red_integrada.html`
+-   **Descripción:** Integración de las configuraciones CLI detalladas para los equipos Cisco de la Sede 1 (Core, Distribución, Acceso). Se añadieron nuevas pestañas para "Automatización" (con un script Python básico) y "Guía PuTTY" (con instrucciones de conexión).
+
+### **Versión 3 (v3)**
+-   **Archivo:** `versiones/v3/herramienta_red_integrada_v2.html`
+-   **Descripción:** Se implementó la primera versión de la **Calculadora de Direccionamiento IP Dinámica (VLSM)** en la pestaña "Plan IP". Esta versión permitía ingresar una IP base y un prefijo para generar una tabla de subredes.
+
+### **Versión 4 (v4)**
+-   **Archivo:** `versiones/v4/herramienta_red_integrada.html`
+-   **Descripción:** Se realizaron ajustes y mejoras menores en la interfaz de usuario y la presentación de los comandos. La lógica de la calculadora IP fue revisada para una mayor precisión.
+
+### **Versión 5 (v5)**
+-   **Archivo:** `versiones/v5/herramienta_red_integrada_v5.html`
+-   **Descripción:** Se añadió una sección de **Troubleshooting de Red** con guías de diagnóstico y comandos de verificación. Se intentó mejorar la funcionalidad de PuTTY, aunque esta versión aún presentaba limitaciones en la conexión directa.
+
+### **Versión 6 (v6 - Versión Final)**
+-   **Archivo:** `index.html` (y `versiones/v6_final/index.html`)
+-   **Descripción:** Esta es la versión más reciente y completa. Se corrigió y depuró la lógica de la **Calculadora VLSM**. La pestaña "PuTTY" fue eliminada y reemplazada por una robusta **Conexión Serial COM — Terminal Interactiva** que utiliza Web Serial API para comunicación directa con equipos físicos. Incluye terminal en tiempo real, historial de comandos, comandos rápidos y envío de configuraciones por lotes. Se mantuvo y mejoró la sección de Troubleshooting.
 
 ## 🚀 Cómo Empezar
 
